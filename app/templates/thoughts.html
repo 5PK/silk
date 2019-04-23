@@ -43,9 +43,14 @@
         </ul>
 
       </div>
-      
-   
 
+      <div class="section">
+        
+        {% for post in posts %}
+            {% include '_post.html' %}
+        {% endfor %}
+
+      </div>
     </div>
 
   </div>

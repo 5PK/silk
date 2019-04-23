@@ -13,7 +13,8 @@
   padding: 0 15px;
 }
 .icon-block .material-icons {
-	font-size: inherit;
+  font-size: inherit;
+  color: black
 }
 
 li {
@@ -38,3 +39,18 @@ li a{
   transition: box-shadow .25s, -webkit-box-shadow .25s;
 
 }
+
+#adminNav {
+  background-color: white;
+  -webkit-box-shadow:none;
+  box-shadow:none;
+}
+
+#adminBack{
+  color:black; 
+  font-size:40px;
+}
+
+#adminBack:hover {
+  background-color: lightgray;
+} 
