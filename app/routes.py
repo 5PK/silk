@@ -1,5 +1,5 @@
-from flask import render_template, flash, redirect, url_for
-from flask import jsonify
+
+from flask import jsonify, render_template
 from flask import request
 from flask_login import current_user, login_user, logout_user
 from app.models import User, Post
@@ -84,12 +84,21 @@ def thoughts():
 
     posts = Post.query.filter_by(user_id = 1)
 
+    print(1)
+
     for post in posts:
-        print(post.title)
-        print(post.body)
-
-    
-
+        post.body = post.body.split("\n\n")[0]
 
     return render_template("thoughts.html", posts=posts)
+
+@app.route('/thought')
+def thought():
+    
+    postId = request.args.get('id')
+
+    posts = Post.query.filter_by(id = postId)
+
+    return render_template("thought.html", post=posts[0])
+
+
 

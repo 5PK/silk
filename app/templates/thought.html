@@ -14,6 +14,16 @@
 
 <body>
 
+
+    <nav  id="adminNav" role="navigation">
+        <div style="width:90%" class="nav-wrapper container">
+            <div class="left">
+                <a style="color:black" href="./thoughts">thoughts</a>
+            </div>
+          
+        </div>
+    </nav>
+
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
      
@@ -24,35 +34,15 @@
 
   <div class="container">
     <div class="section">
-      <h1 class="header center black-text" >Kevin Tran</h1>
-      <div class="row center">
-        <h5 class="header col s12 light">My thoughts, and a public journal. All about travel, work and life.</h5>
-       
-  
-      </div>
-      <div class="row center">
-
-        <ul style="  
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
-          text-align: center;">
-          <li><a href="../index.html">portfolio</a></li>
-          <li><a href="#">github</a></li>
-        </ul>
-
-      </div>
-
-      <div class="section">
-
-        {% for post in posts %}
-            {% include '_post.html' %}
-        {% endfor %}
-
-      </div>
+     <div>
+      <div style="border-bottom: 1px; border-bottom-color: lightgrey">
+       <h1>{{ post.title }}</h1>
+       <div>
+        {{ post.body|markdown }}
+       </div>
+      </div>  
+     </div>
     </div>
-
   </div>
 
 
@@ -62,7 +52,6 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="static/js/materialize.js"></script>
   <script src="static/js/init.js"></script>
-  <script src="static/js/thoughts.js"></script>
 </body>
 
 </html>

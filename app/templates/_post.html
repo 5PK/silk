@@ -1,6 +1,6 @@
 <div>
     <div style="border-bottom: 1px; border-bottom-color: lightgrey">
-        <h1>{{ post.title }}</h1>
+	    <a href="/thought?id={{post.id}}">{{ post.title }}</a>
         <div >
             {{ post.body|markdown }}
         </div>
