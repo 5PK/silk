@@ -40,6 +40,19 @@ li a{
 
 }
 
+div.appPost {
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  border-bottom-style: solid;
+  padding-bottom : 50px;
+  margin-top: 50px;
+}
+
+.appPostContainer {
+  width:50%;
+	
+}
+
 #adminNav {
   background-color: white;
   -webkit-box-shadow:none;

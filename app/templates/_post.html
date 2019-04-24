@@ -1,8 +1,9 @@
-<div>
-    <div style="border-bottom: 1px; border-bottom-color: lightgrey">
-	    <a href="/thought?id={{post.id}}">{{ post.title }}</a>
-        <div >
+    <div class="appPost">
+	
+	<p style="color:lightgrey">{{ post.timestamp }}</p>
+	<h4><a style="color:black;" href="/thought?id={{post.id}}">{{ post.title }}</a></h4>
+	
+	<div >
             {{ post.body|markdown }}
         </div>
     </div>  
-</div>
