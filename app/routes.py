@@ -3,7 +3,8 @@ from flask import jsonify
 from flask import request
 from flask_login import current_user, login_user, logout_user
 from app.models import User, Post
-import markdown
+
+from flask_misaka import markdown
 
 from app import app, db
 from app.forms import LoginForm, ThoughtForm

@@ -1,4 +1,8 @@
 <div>
-    <h1>{{ post.title }}</h1>
-    <div>{{ post.body }}</div>
+    <div style="border-bottom: 1px; border-bottom-color: lightgrey">
+        <h1>{{ post.title }}</h1>
+        <div >
+            {{ post.body|markdown }}
+        </div>
+    </div>  
 </div>
