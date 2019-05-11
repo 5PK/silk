@@ -13,15 +13,22 @@
 </head>
 
 <body>
-        <nav  id="adminNav" role="navigation">
-                <div style="width:90%" class="nav-wrapper container">
-                    <div class="left">
-                        <a  href="/admin"><i  id="adminBack" class="large material-icons">arrow_back</i></a>
-                    </div>
-                  
-                </div>
-            </nav>
 
+        <nav  id="adminNav" role="navigation">
+            <div style="width:90%" class="nav-wrapper container">
+                <a style="color:black" href="/admin">admin</a>
+
+                <ul class="right hide-on-med-and-down">
+                    <li><a style="color:lightgrey;" href="/logout">logout</a></li>
+                </ul>
+
+                <ul id="nav-mobile" class="sidenav">
+                    <li><a href="/admin">admin</a></li>
+                    <li><a href="/logout">logout</a></li>
+                </ul>
+                <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons black-text text-darken-4">menu</i></a>
+            </div>
+        </nav>
     <div class="section no-pad-bot" id="index-banner">
         <div class="container">
 
