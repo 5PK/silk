@@ -1,7 +1,7 @@
 
 from flask import jsonify, render_template
-from flask import request
-from flask_login import current_user, login_user, logout_user
+from flask import request, redirect, url_for
+from flask_login import current_user, login_user, logout_user, login_required
 from app.models import User, Post
 
 from flask_misaka import markdown
@@ -16,6 +16,7 @@ def index():
 
 
 @app.route('/admin', methods=["GET", "POST"])
+@login_required
 def admin():
     if request.method == "GET":
 
