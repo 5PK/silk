@@ -44,17 +44,18 @@
                         </div>
                     </div>
                     <div class="col s6 ">
-                        <div class="card">
-
-                            <span class="card-title">Thoughts</span>
-                            <a class="btn-floating halfway-fab waves-effect waves-light red" href="./writeThought"><i
-                                    class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                        </div>
+			<h3>Thoughts</h3>
+			<a class="btn-floating halfway-fab waves-effect waves-light red" href="./writeThought">
+			 <i class="material-icons">add</i>
+			</a>
+			<hr />
+			<ul class="collection">	
+			{% for post in posts %}
+			 {% include '_postList.html' %}
+			{% endfor %}		 
+			</ul>
                     </div>
                 </div>
-
             </div>
         </div>
 

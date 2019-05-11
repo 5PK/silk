@@ -14,6 +14,28 @@
 
 <body>
 
+    <nav  id="adminNav" role="navigation">
+    <div style="width:90%" class="nav-wrapper container">
+      <a style="color:black" href="/">Kevin Tran</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a style="color:lightgrey;" href="/portfolio">portfolio</a></li>
+        <li><a style="color:lightgrey;"  href="/tutorials">tutorials</a></li>
+        <li><a style="color:lightgrey;" href="https://github.com/5PK">github</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="#">Porfolio</a></li>
+        <li><a href="#">Tutorials</a></li>
+        <li><a href="./site/blog.html">Thoughts</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+    </nav>
+
+
+
+
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
      
@@ -24,24 +46,10 @@
 
   <div class="container">
     <div class="section">
-      <h1 class="header center black-text" >Kevin Tran</h1>
-      <div class="row center">
+      <div style="padding:50px" class="row center">
         <h5 class="header col s12 light">My thoughts, and a public journal. All about travel, work and life.</h5>
        
   
-      </div>
-      <div class="row center">
-
-        <ul style="  
-          list-style-type: none;
-          margin-bottom: 50px;
-          padding: 0;
-          overflow: hidden;
-          text-align: center;">
-          <li><a href="../index.html">portfolio</a></li>
-          <li><a href="#">github</a></li>
-        </ul>
-
       </div>
       <div style="width:80%; text-align:left" class="row center">
         {% for post in posts %}

@@ -17,11 +17,17 @@ def index():
 
 @app.route('/admin', methods=["GET", "POST"])
 def admin():
-    if request.method == "POST":
-        return render_template("app.html")
+    if request.method == "GET":
 
-    else:
-        return render_template("app.html")
+        posts = Post.query.filter_by(user_id = 1)
+
+        print(1)
+
+        for post in posts:
+            post.body = post.body.split("\n\n")[0]
+
+        return render_template("app.html", posts=posts)
+
 
 
 @app.route('/login', methods=["GET", "POST"])
