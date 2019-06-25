@@ -1,4 +1,4 @@
-# personal-website
+# silk
 
 This is a microblog written in python using Flask.
 
